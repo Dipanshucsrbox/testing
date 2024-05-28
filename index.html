@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBM SkillsBuild Internship Program 2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="https://www.ibm.com/design/language/videos/animation/animation-overview-pe.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <header>
+        <img src="https://drive.google.com/uc?export=view&id=1CMPCSAMZgRY5GjWqaoPzuk--cfCZNVOh" alt="CSRBOX Logo" class="left">
+        <img src="https://drive.google.com/uc?export=view&id=1eEr-QyNfyb3FExMP8JykYflBlPYcZlbG" alt="IBM SkillsBuild Logo" class="right">
+    </header>
+    <h1>IBM SkillsBuild Internship Program 2024</h1>
+    <div class="content">
+        <div class="container" id="loginForm">
+            <div class="form-group">
+                <label for="uniqueID">Unique ID</label>
+                <input type="text" id="uniqueID" name="uniqueID" required>
+            </div>
+            <div class="form-group">
+                <label for="collegeName">College Name</label>
+                <select id="collegeName" name="collegeName" required></select>
+            </div>
+            <div class="form-group">
+                <button onclick="login(event)">Login</button>
+            </div>
+        </div>
+        <div class="container" id="dashboard" style="display:none;">
+            <h2>Welcome, <span id="teamName"></span> Team</h2>
+            <p><strong>Unique ID:</strong> <span id="teamUniqueID"></span></p>
+            <p><strong>College Name:</strong> <span id="teamCollegeName"></span></p>
+            <p><strong>Internship Name:</strong> <span id="internshipName"></span></p>
+            <p><strong>State:</strong> <span id="teamState"></span></p>
+            <p><strong>Team Name:</strong> <span id="teamName"></span></p>
+            <p><strong>Total Members:</strong> <span id="totalMembers"></span></p>
+            <p><strong>Female Members:</strong> <span id="femaleMembers"></span></p>
+            <div class="form-group">
+                <button id="submitConceptNote">Submit Concept Note</button>
+            </div>
+            <div class="form-group">
+                <button id="finalDeliverableButton">Submit Final Deliverable</button>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Serial Number</th>
+                            <th>Name</th>
+                            <th>Email ID</th>
+                            <th>Phone Number</th>
+                            <th>Learning Plan Certificate</th>
+                        </tr>
+                    </thead>
+                    <tbody id="teamMembersTable">
+                        <!-- Populate table rows from Google Sheets -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
